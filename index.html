@@ -22,12 +22,15 @@
       display: flex;
       height: 100vh;
       justify-content: center;
+      overflow: hidden;
       width: 100%;
     }
     .swiper-slide__image img{
-      height: 100vh;
+      height: auto;
+      max-height: 100vh;
       position: relative;
       width: auto;
+      max-width: 100%;
       z-index: 2;
     }
     .swiper-slide__bg img{
@@ -38,6 +41,7 @@
       opacity: 16%;
       position: absolute;
       top: 0;
+      transform: scale(1.2);
       width: 100%;
       z-index: 1;
     }
@@ -45,11 +49,18 @@
   <script type="module">
     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'  
     const swiper = new Swiper('.swiper', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
+      grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: ["-140%", 0, -500],
+        },
+        next: {
+          shadow: true,
+          translate: ["140%", 0, -500],
+        },
+      },
     })
   </script>
 </head>
@@ -57,11 +68,61 @@
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="swiper-slide__image"><img src="neon.jpg" alt=""></div>
-        <div class="swiper-slide__bg"><img src="neon.jpg" alt=""></div>
+        <div class="swiper-slide__image"><img src="images/neon.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/neon.webp" alt=""></div>
       </div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/01.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/01.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/02.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/02.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/03.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/03.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/04.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/04.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/05.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/05.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/06.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/06.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/07.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/07.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/08.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/08.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/09.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/09.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/10.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/10.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/11.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/11.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/12.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/12.webp" alt=""></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-slide__image"><img src="images/13.webp" alt=""></div>
+        <div class="swiper-slide__bg"><img src="images/13.webp" alt=""></div>
+      </div>
     </div>
   </div>
 </body>
